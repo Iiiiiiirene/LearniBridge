@@ -10,7 +10,7 @@ Extensive experiments on image and video generation tasks demonstrate that **Lea
 
 ## 🏗️ Overview
 
-![LearniBridge Architecture](./assets/architecture.png)
+![LearniBridge Architecture](./assets/pipeline.pdf)
 
 Our method consists of two primary stages: a **training phase** and an **inference phase**.
 
