@@ -1,0 +1,16 @@
+LearniBridge
+
+The maintainers have selected Apache-2.0 for original project code,
+including the reusable learnibridge core. See LICENSE.
+
+This grant does not replace third-party licenses. Upstream-derived
+Hunyuan model-facing scripts under hunyuan/ remain subject to the
+Tencent Hunyuan Community License and are not relicensed by this grant.
+Wan-derived scripts retain their upstream Apache-2.0 attribution.
+
+Model weights, third-party derivatives and prompt collections require
+their own applicable permissions. They are not covered merely by being
+placed alongside this project's Apache-2.0 code.
+
+See THIRD_PARTY_NOTICES.md and licenses/ for the corresponding sources
+and license texts.
