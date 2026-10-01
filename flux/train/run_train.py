@@ -33,7 +33,7 @@ TRAINING_DEFAULTS = {
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", choices=("flux", "hunyuan", "wan"), required=True)
+    parser.set_defaults(model="flux")
     parser.add_argument("--ckpt-dir", type=Path, required=True)
     parser.add_argument("--feature-roots", type=Path, nargs="+", required=True)
     parser.add_argument("--steps", type=int, nargs="+")
@@ -84,7 +84,7 @@ def main():
             block = {"flux": 37, "hunyuan": 39, "wan": 29}[args.model]
             filename = adapter_filename(args.model, step, layer)
             command = [
-                sys.executable, str(ROOT / "run.py"), args.model, "train",
+                sys.executable, str(ROOT / "run.py"), "train-step",
                 "--ckpt-dir", str(checkpoint), "--steps", str(step), "--block-idx", str(block),
                 "--rank", str(args.rank), "--alpha", str(args.alpha),
                 "--epochs", str(args.epochs), "--lr", str(args.lr),

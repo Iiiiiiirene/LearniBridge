@@ -84,7 +84,7 @@ def resolve_training_interval(args, offset_name="offset", legacy_offset=1):
     if not args.steps or 0 in offsets:
         raise ValueError("--N training targets must be skipped steps, not full-compute steps.")
     if len(offsets) != 1:
-        raise ValueError("These targets need different offsets; use scripts/train_schedule.py --N.")
+        raise ValueError("These targets need different offsets; use this model's run.py train --N entry.")
     offset = offsets.pop()
     if explicit_offset is not None and explicit_offset != offset:
         raise ValueError(f"Supplied offset {explicit_offset} conflicts with --N; expected {offset}.")

@@ -28,7 +28,7 @@ def prompts_for(args):
     if args.prompt is not None:
         prompts = [args.prompt.strip()]
     else:
-        prompt_file = args.prompt_file or Path(__file__).resolve().parents[1] / "flux/prompts" / args.default_prompts
+        prompt_file = args.prompt_file or Path(__file__).resolve().parents[1] / "prompts" / args.default_prompts
         prompts = [line.strip() for line in prompt_file.read_text().splitlines() if line.strip()]
     if not prompts or not all(prompts):
         raise ValueError("No nonempty prompts found.")

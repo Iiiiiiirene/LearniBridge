@@ -5,8 +5,8 @@ The root `LICENSE` applies to original LearniBridge code. It does not replace th
 | Component | Source | License information |
 | --- | --- | --- |
 | FLUX model implementation and pipeline | [Hugging Face Diffusers](https://github.com/huggingface/diffusers) | Apache-2.0; imported as a dependency |
-| Wan model-facing code | [Wan2.1](https://github.com/Wan-Video/Wan2.1) | Upstream attribution is retained; see `licenses/Wan2.1-Apache-2.0.txt` |
-| Hunyuan model-facing code | [HunyuanVideo](https://github.com/Tencent-Hunyuan/HunyuanVideo) | See `licenses/HunyuanVideo-Community.txt`; these files are not relicensed by the root Apache-2.0 grant |
+| Wan model-facing code | [Wan2.1](https://github.com/Wan-Video/Wan2.1) | Upstream attribution is retained; see `wan/LICENSE.Wan2.1.txt` |
+| Hunyuan model-facing code | [HunyuanVideo](https://github.com/Tencent-Hunyuan/HunyuanVideo) | See `hunyuan/LICENSE.HunyuanVideo.txt`; these files are not relicensed by the root Apache-2.0 grant |
 
 The model-facing scripts have local path/CLI integration, feature-caching and LoRA-loading changes. Their upstream attribution and applicable license texts are retained.
 
