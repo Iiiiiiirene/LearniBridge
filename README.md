@@ -4,23 +4,35 @@ Diffusion Transformers produce high-quality images and videos, but repeated comp
 
 **LearniBridge** learns lightweight LoRA-based corrections in the final Transformer block to calibrate cached features. This repository provides the complete **cache → train → infer** workflow for **FLUX.1-dev, HunyuanVideo, and Wan2.1-T2V-1.3B**.
 
-## Overview
+## 🧩 Overview
 
 ![LearniBridge Architecture](assets/pipeline.png)
 
-## Results
+The pipeline above combines feature caching with lightweight LoRA-based calibration to reduce feature-reuse errors during accelerated inference.
 
-### Image
+## ✨ Showcase
 
-![Image results](assets/results/image.png)
+The image and video examples below showcase qualitative generation results with LearniBridge.
 
-### Video
+<p align="center">
+  <a href="assets/results/image.png">
+    <img src="assets/results/image.png" alt="LearniBridge image generation results" width="100%">
+  </a>
+</p>
+<p align="center">
+  <sub>Image generation results · <a href="assets/results/image.png">View full-resolution image ↗</a></sub>
+</p>
 
-[![Video results — click to watch](assets/results/video-preview.jpg)](assets/results/video.mp4)
+<p align="center">
+  <a href="assets/results/video.mp4">
+    <img src="assets/results/video-preview.jpg" alt="LearniBridge video generation results — click to watch" width="100%">
+  </a>
+</p>
+<p align="center">
+  <sub>Video generation results · <a href="assets/results/video.mp4">▶ Watch full video</a></sub>
+</p>
 
-[Watch the video](assets/results/video.mp4)
-
-## Usage
+## 🚀 Usage
 
 Choose a model, install its dependencies, then **cache features → train adapters → run inference**.
 
@@ -74,6 +86,6 @@ python wan/run.py infer --N 5 \
 
 </details>
 
-## License
+## 📄 License
 
 Original LearniBridge code is licensed under [Apache-2.0](LICENSE). Third-party code and model weights retain their own terms; see [NOTICE](NOTICE) and [third-party notices](THIRD_PARTY_NOTICES.md).
